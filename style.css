@@ -1,0 +1,194 @@
+html{
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+  position: sticky; 
+  top: 0; 
+  background-color: #ffffff; 
+  z-index: 1000; 
+  transition: opacity 0.3s ease, height 0.3s ease; /* Agregamos la transición de altura */
+  display: flex; 
+  align-items: center; 
+  background-color: #ffffff;
+  padding: 10px 0;
+  height: 60px; /* Altura fija para el encabezado */
+}
+
+header.small {
+  opacity: 0.8; /* Cambia la opacidad cuando se desplaza hacia abajo */
+  height: 50px; /* Reducimos la altura del encabezado */
+}
+
+
+.logo {
+    margin-right: 20px; /* Añade un margen entre el logo y el menú */
+}
+
+.logo img {
+    height: 80px; /* Establece la altura del logo */
+}
+
+.menu-principal {
+    background-color: #fff;
+    margin-left: auto; /* Empuja el menú hacia la derecha */
+    text-align: right;
+}
+  
+  .menu-principal ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-principal li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .menu-principal a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.1s ease, background-color 0.3s ease; /* Agrega una transición suave */
+    border-radius: 25px; /* Agrega el borde redondeado */
+  }
+  
+  .menu-principal a:hover {
+    background-color: #70B251;
+    color: white;
+    border-radius: 25px;
+    transition-delay: 0.1s; /* Agrega un pequeño retraso a la transición */
+    border: none; /* Elimina el borde en el estado hover */
+  }
+
+  .menu-principal a.active {
+    color: #509f42; /* Cambia el color del texto activo a verde */
+    font-weight: bold; /* Hace que el texto activo sea negrita */
+  }
+
+  .menu-principal a.active:hover{
+    color: #fff;
+  }
+
+.contenedor1 {
+  display: flex; /* Utiliza flexbox para organizar los elementos */
+  background-color: #70B251;
+  align-items: center;
+}
+
+.info {
+  flex: 1; /* Que la sección de información ocupe el espacio disponible */
+  padding: 20px; /* Añade un poco de espacio alrededor del contenido */
+  display: flex; /* Utiliza flexbox para alinear los elementos dentro de .info */
+  flex-direction: column; /* Alinea los elementos verticalmente */
+}
+
+.info h2 {
+  margin-bottom: 10px; /* Añade espacio entre el título y los botones */
+  padding-left: 5%;
+  color: white;
+  text-align: justify;
+}
+
+.info img{
+  width: 200px;
+  display: block; /* Asegura que la imagen sea un elemento de bloque */
+  margin: auto; /* Centra la imagen horizontalmente */
+  border-radius: 25px;
+}
+
+.acciones {
+  display: flex; /* Utiliza flexbox para alinear los elementos en fila */
+  align-items: center; /* Centra los elementos verticalmente */
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 5%;
+}
+
+.acciones .boton-trabajemos {
+  text-decoration: none;
+  margin-right: 10px; /* Añade espacio entre el botón y el enlace */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombras en x, y, desenfoque y color */
+  border: none; /* Elimina el borde del botón */
+  background-color: white; /* Color de fondo del botón */
+  color: #509f42; /* Color del texto del botón */
+  padding: 10px 20px; /* Añade relleno al botón */
+  border-radius: 20px; /* Borde redondeado del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Agrega una transición suave al cambiar el color de fondo y la sombra */
+}
+
+.acciones .boton-trabajemos:hover {
+  background-color: #cfd3ce; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Cambia la sombra al pasar el cursor sobre el botón */
+}
+
+.acciones .mis-proyectos {
+  text-decoration: none;
+  color: #000;
+  margin-left: auto; /* Coloca el enlace al final a la derecha */
+  transition: transform 0.3s ease; /* Agrega una transición suave al cambio de tamaño */
+  backface-visibility: hidden; /* Evita que el texto se vea borroso durante la transformación */
+}
+
+.acciones .mis-proyectos:hover {
+  transform: scale(1.1); /* Hace que el elemento aumente un 10% su tamaño original */
+}
+
+
+.proyecto {
+  width: 600px;
+  background-color: #70B251;
+  margin-left: 20px;
+  border: 20px solid #70B251;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos dentro del contenedor */
+}
+
+.proyecto a {
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos dentro del enlace */
+}
+
+.proyecto img {
+  width: 100%;
+  height: auto; /* Cambia height a auto para mantener la proporción de la imagen */
+  max-height: 100%; /* Asegura que la imagen no exceda la altura del contenedor */
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.servicios {
+  text-align: center;
+}
+
+.servicios h2 {
+  color: #333; /* Color del texto del título */
+  margin-bottom: 20px; /* Espacio entre el título y los servicios */
+}
+
+.servicios-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  gap: 20px; /* Espacio entre las imágenes */
+  justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+.servicio {
+  text-align: center; /* Centrar el texto */
+}
+
+.servicio img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.servicio p {
+  margin-top: 10px;
+  text-align: center;
+  color: #555; /* Color del texto de descripción */
+}
