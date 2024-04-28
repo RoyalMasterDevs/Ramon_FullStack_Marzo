@@ -10,7 +10,6 @@ header {
   transition: opacity 0.3s ease, height 0.3s ease; /* Agregamos la transición de altura */
   display: flex; 
   align-items: center; 
-  background-color: #ffffff;
   padding: 10px 0;
   height: 60px; /* Altura fija para el encabezado */
 }
@@ -190,5 +189,165 @@ header.small {
 .servicio p {
   margin-top: 10px;
   text-align: center;
-  color: #555; /* Color del texto de descripción */
+  color: #555;
+}
+
+.listo-trabajar {
+  background-color: #70B251; 
+  border-radius: 25px; /* Borde redondeado de 25px */
+  padding: 20px; /* Espaciado interno de 20px */
+  margin: 20px 60px; /* Margen superior e inferior de 20px y sin margen en los lados */
+}
+
+.titulo-grande {
+  color: white; /* Color de texto blanco */
+  text-align: center; /* Texto centrado */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+}
+
+.titulo-pequeno {
+  color: black; /* Color de texto negro */
+  text-align: center; /* Texto centrado */
+  font-size: 18px; /* Tamaño de fuente más pequeño */
+}
+
+footer {
+  background-color: #E3E0E0;
+  color: #000;
+  padding: 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.logo-redes {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo img {
+  height: 100px;
+}
+
+.acciones .mis-proyectos {
+  text-decoration: none;
+  color: #000;
+  margin-left: auto; /* Coloca el enlace al final a la derecha */
+  transition: transform 0.3s ease; /* Agrega una transición suave al cambio de tamaño */
+  backface-visibility: hidden; /* Evita que el texto se vea borroso durante la transformación */
+}
+
+.acciones .mis-proyectos:hover {
+  transform: scale(1.1); /* Hace que el elemento aumente un 10% su tamaño original */
+}
+
+.redes-sociales a{
+  font-size: 25px;
+  color: #000;
+  margin-right: 10px;
+  margin-left: 15px;
+}
+
+.redes-sociales a:hover {
+  color: #fff;
+}
+
+
+.nav-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-bottom: 10px;
+}
+
+.nav-links a {
+  color: #000;
+  text-decoration: none;
+}
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+}
+
+.telefono, .email {
+  display: flex;
+  align-items: center;
+}
+
+.contacto p {
+  margin-left: 5px;
+}
+
+
+
+/* Seccion de Responsive */
+
+/* Estilos para pantallas de hasta 768px de ancho */
+@media only screen and (max-width: 768px) {
+  header {
+    height: auto; /* Cambia la altura del encabezado */
+  }
+  
+  .logo img {
+    height: 50px; /* Cambia el tamaño del logo */
+  }
+
+  .menu-principal {
+    display: none; /* Oculta el menú principal */
+  }
+
+  .menu-principal ul {
+    display: none; /* Oculta la lista de enlaces */
+  }
+
+  .menu-principal li {
+    display: block; /* Muestra los elementos de lista uno debajo del otro */
+    margin: 10px 0; /* Añade espacio entre los elementos de lista */
+    text-align: center; /* Centra el texto */
+  }
+
+  .info h2 {
+    font-size: 18px; /* Reduce el tamaño del texto */
+  }
+
+  .acciones {
+    flex-direction: column; /* Muestra los botones uno debajo del otro */
+    align-items: center; /* Centra los botones */
+    padding: 10px; /* Ajusta el espacio entre los botones */
+  }
+
+  .acciones .boton-trabajemos, .acciones .mis-proyectos {
+    margin-bottom: 10px; /* Añade espacio entre los botones */
+  }
+
+  .proyecto {
+    flex-direction: column; /* Muestra la imagen debajo del texto */
+    margin-left: 0; /* Elimina el margen izquierdo */
+  }
+
+  .proyecto img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+  .servicios-container {
+    grid-template-columns: repeat(1, 1fr); /* Cambia a una sola columna */
+  }
+
+  .servicio img {
+    width: 100%; /* Ajusta el ancho de la imagen */
+  }
+}
+
+/* Estilos para pantallas de hasta 480px de ancho */
+@media only screen and (max-width: 480px) {
+  .info h2 {
+    font-size: 16px; /* Reduce aún más el tamaño del texto */
+  }
 }
