@@ -95,7 +95,7 @@ header.small {
   width: 200px;
   display: block; /* Asegura que la imagen sea un elemento de bloque */
   margin: auto; /* Centra la imagen horizontalmente */
-  border-radius: 25px;
+  border-radius: 250px;
 }
 
 .acciones {
@@ -136,29 +136,29 @@ header.small {
   transform: scale(1.1); /* Hace que el elemento aumente un 10% su tamaño original */
 }
 
-
 .proyecto {
-  width: 600px;
   background-color: #70B251;
-  margin-left: 20px;
-  border: 20px solid #70B251;
-  box-sizing: border-box;
   display: flex;
   align-items: center; /* Alinea verticalmente los elementos dentro del contenedor */
+  justify-content: flex-end; /* Alinea la imagen a la derecha del contenedor */
+  border: 20px solid #70B251;
+  box-sizing: border-box;
 }
 
 .proyecto a {
   display: flex;
   align-items: center; /* Alinea verticalmente los elementos dentro del enlace */
+  flex-direction: row-reverse;
 }
 
 .proyecto img {
-  width: 100%;
+  width: 50%;
   height: auto; /* Cambia height a auto para mantener la proporción de la imagen */
   max-height: 100%; /* Asegura que la imagen no exceda la altura del contenedor */
   object-fit: cover;
   border-radius: 20px;
 }
+
 
 .servicios {
   text-align: center;
@@ -298,18 +298,23 @@ footer {
     height: 50px; /* Cambia el tamaño del logo */
   }
 
-  .menu-principal {
-    display: none; /* Oculta el menú principal */
-  }
-
-  .menu-principal ul {
-    display: none; /* Oculta la lista de enlaces */
-  }
-
   .menu-principal li {
-    display: block; /* Muestra los elementos de lista uno debajo del otro */
+    display: inline; /* Muestra los elementos de lista uno debajo del otro */
     margin: 10px 0; /* Añade espacio entre los elementos de lista */
     text-align: center; /* Centra el texto */
+  }
+
+  .menu-principal a:hover {
+    color:#509f42;
+    background-color: transparent; /* Elimina el fondo del hover en pantallas de celular */
+  }
+
+  .contenedor1 {
+    flex-direction: column; /* Cambiar la dirección de los elementos a columna */
+  }
+
+  .info img {
+    width: 150px; /* Reducir el tamaño de las imágenes en pantallas más pequeñas */
   }
 
   .info h2 {
@@ -324,16 +329,22 @@ footer {
 
   .acciones .boton-trabajemos, .acciones .mis-proyectos {
     margin-bottom: 10px; /* Añade espacio entre los botones */
+    margin-left: 25px;
   }
 
   .proyecto {
     flex-direction: column; /* Muestra la imagen debajo del texto */
     margin-left: 0; /* Elimina el margen izquierdo */
+    margin-top: 20px; /* Añadir espacio entre la información y el proyecto */
   }
+  
 
   .proyecto img {
-    max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+    max-width: 50%; /* Ajusta el tamaño máximo de la imagen */
     height: auto; /* Ajusta la altura automáticamente */
+    margin: auto; /* Centra la imagen horizontalmente */
+    margin-top: 20px; /* Ajusta el espacio entre la información y la imagen */
+  
   }
 
   .servicios-container {
@@ -341,13 +352,34 @@ footer {
   }
 
   .servicio img {
-    width: 100%; /* Ajusta el ancho de la imagen */
+    width: 50%; /* Ajusta el ancho de la imagen */
   }
+
+  .footer-container {
+    grid-template-columns: 1fr; /* Cambia a una sola columna en dispositivos móviles */
+  }
+  
+  .logo img {
+    height: 50px; /* Reduce el tamaño del logo en dispositivos móviles */
+  }
+  
+  .redes-sociales a {
+    font-size: 20px; /* Reduce el tamaño de los iconos de redes sociales */
+  }
+  
 }
+
+
+
 
 /* Estilos para pantallas de hasta 480px de ancho */
 @media only screen and (max-width: 480px) {
   .info h2 {
     font-size: 16px; /* Reduce aún más el tamaño del texto */
   }
+
+  .redes-sociales a {
+    font-size: 18px; /* Reduce aún más el tamaño de los iconos de redes sociales en dispositivos móviles */
+  }
 }
+
