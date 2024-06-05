@@ -10,7 +10,6 @@ header {
   transition: opacity 0.3s ease, height 0.3s ease; /* Agregamos la transición de altura */
   display: flex; 
   align-items: center; 
-  background-color: #ffffff;
   padding: 10px 0;
   height: 60px; /* Altura fija para el encabezado */
 }
@@ -96,7 +95,7 @@ header.small {
   width: 200px;
   display: block; /* Asegura que la imagen sea un elemento de bloque */
   margin: auto; /* Centra la imagen horizontalmente */
-  border-radius: 25px;
+  border-radius: 250px;
 }
 
 .acciones {
@@ -137,29 +136,29 @@ header.small {
   transform: scale(1.1); /* Hace que el elemento aumente un 10% su tamaño original */
 }
 
-
 .proyecto {
-  width: 600px;
   background-color: #70B251;
-  margin-left: 20px;
-  border: 20px solid #70B251;
-  box-sizing: border-box;
   display: flex;
   align-items: center; /* Alinea verticalmente los elementos dentro del contenedor */
+  justify-content: flex-end; /* Alinea la imagen a la derecha del contenedor */
+  border: 20px solid #70B251;
+  box-sizing: border-box;
 }
 
 .proyecto a {
   display: flex;
   align-items: center; /* Alinea verticalmente los elementos dentro del enlace */
+  flex-direction: row-reverse;
 }
 
 .proyecto img {
-  width: 100%;
+  width: 50%;
   height: auto; /* Cambia height a auto para mantener la proporción de la imagen */
   max-height: 100%; /* Asegura que la imagen no exceda la altura del contenedor */
   object-fit: cover;
   border-radius: 20px;
 }
+
 
 .servicios {
   text-align: center;
@@ -190,5 +189,197 @@ header.small {
 .servicio p {
   margin-top: 10px;
   text-align: center;
-  color: #555; /* Color del texto de descripción */
+  color: #555;
 }
+
+.listo-trabajar {
+  background-color: #70B251; 
+  border-radius: 25px; /* Borde redondeado de 25px */
+  padding: 20px; /* Espaciado interno de 20px */
+  margin: 20px 60px; /* Margen superior e inferior de 20px y sin margen en los lados */
+}
+
+.titulo-grande {
+  color: white; /* Color de texto blanco */
+  text-align: center; /* Texto centrado */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+}
+
+.titulo-pequeno {
+  color: black; /* Color de texto negro */
+  text-align: center; /* Texto centrado */
+  font-size: 18px; /* Tamaño de fuente más pequeño */
+}
+
+footer {
+  background-color: #E3E0E0;
+  color: #000;
+  padding: 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.logo-redes {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo img {
+  height: 100px;
+}
+
+.acciones .mis-proyectos {
+  text-decoration: none;
+  color: #000;
+  margin-left: auto; /* Coloca el enlace al final a la derecha */
+  transition: transform 0.3s ease; /* Agrega una transición suave al cambio de tamaño */
+  backface-visibility: hidden; /* Evita que el texto se vea borroso durante la transformación */
+}
+
+.acciones .mis-proyectos:hover {
+  transform: scale(1.1); /* Hace que el elemento aumente un 10% su tamaño original */
+}
+
+.redes-sociales a{
+  font-size: 25px;
+  color: #000;
+  margin-right: 10px;
+  margin-left: 15px;
+}
+
+.redes-sociales a:hover {
+  color: #fff;
+}
+
+
+.nav-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-bottom: 10px;
+}
+
+.nav-links a {
+  color: #000;
+  text-decoration: none;
+}
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+}
+
+.telefono, .email {
+  display: flex;
+  align-items: center;
+}
+
+.contacto p {
+  margin-left: 5px;
+}
+
+
+
+/* Seccion de Responsive */
+
+/* Estilos para pantallas de hasta 768px de ancho */
+@media only screen and (max-width: 768px) {
+  header {
+    height: auto; /* Cambia la altura del encabezado */
+  }
+  
+  .logo img {
+    height: 50px; /* Cambia el tamaño del logo */
+  }
+
+  .menu-principal li {
+    display: inline; /* Muestra los elementos de lista uno debajo del otro */
+    margin: 10px 0; /* Añade espacio entre los elementos de lista */
+    text-align: center; /* Centra el texto */
+  }
+
+  .menu-principal a:hover {
+    color:#509f42;
+    background-color: transparent; /* Elimina el fondo del hover en pantallas de celular */
+  }
+
+  .contenedor1 {
+    flex-direction: column; /* Cambiar la dirección de los elementos a columna */
+  }
+
+  .info img {
+    width: 150px; /* Reducir el tamaño de las imágenes en pantallas más pequeñas */
+  }
+
+  .info h2 {
+    font-size: 18px; /* Reduce el tamaño del texto */
+  }
+
+  .acciones {
+    flex-direction: column; /* Muestra los botones uno debajo del otro */
+    align-items: center; /* Centra los botones */
+    padding: 10px; /* Ajusta el espacio entre los botones */
+  }
+
+  .acciones .boton-trabajemos, .acciones .mis-proyectos {
+    margin-bottom: 10px; /* Añade espacio entre los botones */
+    margin-left: 25px;
+  }
+
+  .proyecto {
+    flex-direction: column; /* Muestra la imagen debajo del texto */
+    margin-left: 0; /* Elimina el margen izquierdo */
+    margin-top: 20px; /* Añadir espacio entre la información y el proyecto */
+  }
+  
+
+  .proyecto img {
+    max-width: 50%; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; /* Ajusta la altura automáticamente */
+    margin: auto; /* Centra la imagen horizontalmente */
+    margin-top: 20px; /* Ajusta el espacio entre la información y la imagen */
+  
+  }
+
+  .servicios-container {
+    grid-template-columns: repeat(1, 1fr); /* Cambia a una sola columna */
+  }
+
+  .servicio img {
+    width: 50%; /* Ajusta el ancho de la imagen */
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr; /* Cambia a una sola columna en dispositivos móviles */
+  }
+  
+  .logo img {
+    height: 50px; /* Reduce el tamaño del logo en dispositivos móviles */
+  }
+  
+  .redes-sociales a {
+    font-size: 20px; /* Reduce el tamaño de los iconos de redes sociales */
+  }
+  
+}
+
+
+
+
+/* Estilos para pantallas de hasta 480px de ancho */
+@media only screen and (max-width: 480px) {
+  .info h2 {
+    font-size: 16px; /* Reduce aún más el tamaño del texto */
+  }
+
+  .redes-sociales a {
+    font-size: 18px; /* Reduce aún más el tamaño de los iconos de redes sociales en dispositivos móviles */
+  }
+}
+
